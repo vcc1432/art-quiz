@@ -5,7 +5,7 @@ const initialState = {
   questions,
   points: 0,
   currentQuestion: null,
-  finishedQuiz: true
+  finishedQuiz: false
 }
 
 const reducer = (state = initialState, action = {}) => {
@@ -14,7 +14,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state, 
         currentQuestion: action.payload,
-        // finishedQuiz: false
+        finishedQuiz: false
       }
     
     case ADD_POINTS:
