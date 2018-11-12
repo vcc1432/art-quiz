@@ -6,23 +6,13 @@ html {
   height: 100%;
 }
 
-.navbar {
-  background: white;
-  box-shadow:  0 1px 3px 0 rgba(104, 104, 104, 0.5);
-} 
-
-.btn-xl {
-  padding: 1.25rem 2.5rem;
-}
-
 .masthead {
   min-height: 30rem;
   position: relative;
   display: table;
   width: 100%;
   height: 100vh;
-  /* padding-top: 8rem;
-  padding-bottom: 8rem; */
+
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("./lib/SK-A-2860.jpg");
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("./lib/SK-A-2860.jpg");
   background-position: center center;
@@ -58,38 +48,11 @@ html {
   }
 }
 
-.btn-primary {
-  background-color: #1D809F !important;
-  border-color: #1D809F !important;
-  color: #fff !important;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #155d74 !important;
-  border-color: #155d74 !important;
-}
-
-.btn-secondary {
-  background-color: #ecb807 !important;
-  border-color: #ecb807 !important;
-  color: #fff !important;
-}
-
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-  background-color: #ba9106 !important;
-  border-color: #ba9106 !important;
-}
-
-.btn {
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
-  font-weight: 700;
-}
-
 @keyframes slide-in {
   0%   { opacity: 0; transform: translate3d(40%, 0, 0); }
   100% { opacity: 1; transform: none; }
 }
+
 .question {
     animation: slide-in .4s ease;
 }

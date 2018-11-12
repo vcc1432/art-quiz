@@ -7,7 +7,7 @@ export default function Quiz(props) {
     <div class="col">
       <h2>question</h2>
       <h1>{props.getNumber()}</h1>
-      <h3>of 10</h3>
+      <h3>of {props.questions.length}</h3>
     </div>
     <div className="col-6">
       <h1 className="display-2">Art Quiz</h1>
