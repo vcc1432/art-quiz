@@ -1,30 +1,125 @@
-
   [
-  {
-    "id": "1",
-    "difficulty":"easy",
-    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/402px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
-    "question":"Who painted the Mona Lisa?",
-    "correct_answer":"Leonardo da Vinci",
-    "answers":[
-      {"id": "1", "name": "Pablo Picasso"},
-      {"id": "2", "name": "Claude Monet"},
-      {"id": "3", "name": "Vincent van Gogh"},
-      {"id": "4", "name": "Leonardo da Vinci"}
-    ]
-  },
-  {
-    "id": "2",
-    "difficulty":"hard",
-    "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Piet_Mondrian_2.jpg/590px-Piet_Mondrian_2.jpg",
-    "question":"Painter Piet Mondrian (1872 - 1944) was a part of what movement?",
-    "correct_answer":"Neoplasticism",
-    "answers":[
-    {"id": "5", "name": "Precisionism"},
-    {"id": "6", "name": "Cubism"},
-    {"id": "7", "name": "impressionism"},
-    {"id": "8", "name": "Neoplasticism"}]
-  }
+    {
+      "id": "1",
+      "difficulty":"easy",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/402px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+      "question":"Who painted the Mona Lisa?",
+      "correct_answer":"Leonardo da Vinci",
+      "answers":[
+        {"id": "1", "name": "Pablo Picasso"},
+        {"id": "2", "name": "Claude Monet"},
+        {"id": "3", "name": "Vincent van Gogh"},
+        {"id": "4", "name": "Leonardo da Vinci"}
+      ]
+    },
+    {
+      "id": "2",
+      "difficulty":"hard",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Piet_Mondrian_2.jpg/590px-Piet_Mondrian_2.jpg",
+      "question":"Painter Piet Mondrian (1872 - 1944) was a part of what movement?",
+      "correct_answer":"Neoplasticism",
+      "answers":[
+        {"id": "5", "name": "Precisionism"},
+        {"id": "6", "name": "Cubism"},
+        {"id": "7", "name": "Impressionism"},
+        {"id": "8", "name": "Neoplasticism"}]
+    },
+    {
+      "id": "3",
+      "difficulty":"hard",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
+      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is it called?",
+      "correct_answer":"Ultramarine",
+      "answers":[
+        {"id": "9", "name": "Indigo"},
+        {"id": "10", "name": "Ultramarine"},
+        {"id": "11", "name": "Egyptian Blue"},
+        {"id": "12", "name": "Prussian Blue"}]
+    },
+    {
+      "id": "4",
+      "difficulty":"easy",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Michelangelo_-_Creation_of_Adam.jpg/640px-Michelangelo_-_Creation_of_Adam.jpg",
+      "question":"Who painted the ceiling of the Sistine Chapel?",
+      "correct_answer":"Michelangelo",
+      "answers":[
+        {"id": "13", "name": "Leonardo da Vinci"},
+        {"id": "14", "name": "Michelangelo"},
+        {"id": "15", "name": "El Greco"},
+        {"id": "16", "name": "Filippo Brunneleschi"}]
+    },
+    {
+      "id": "5",
+      "difficulty":"hard",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
+      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
+      "correct_answer":"Ultramarine",
+      "answers":[
+        {"id": "9", "name": "Indigo"},
+        {"id": "10", "name": "Ultramarine"},
+        {"id": "11", "name": "Egyptian Blue"},
+        {"id": "12", "name": "Prussian Blue"}]
+    },
+    {
+      "id": "6",
+      "difficulty":"hard",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
+      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
+      "correct_answer":"Ultramarine",
+      "answers":[
+        {"id": "9", "name": "Indigo"},
+        {"id": "10", "name": "Ultramarine"},
+        {"id": "11", "name": "Egyptian Blue"},
+        {"id": "12", "name": "Prussian Blue"}]
+    },
+    {
+      "id": "7",
+      "difficulty":"hard",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
+      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
+      "correct_answer":"Ultramarine",
+      "answers":[
+        {"id": "9", "name": "Indigo"},
+        {"id": "10", "name": "Ultramarine"},
+        {"id": "11", "name": "Egyptian Blue"},
+        {"id": "12", "name": "Prussian Blue"}]
+    },
+    {
+      "id": "8",
+      "difficulty":"hard",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
+      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
+      "correct_answer":"Ultramarine",
+      "answers":[
+        {"id": "9", "name": "Indigo"},
+        {"id": "10", "name": "Ultramarine"},
+        {"id": "11", "name": "Egyptian Blue"},
+        {"id": "12", "name": "Prussian Blue"}]
+    },
+    {
+      "id": "9",
+      "difficulty":"hard",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
+      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
+      "correct_answer":"Ultramarine",
+      "answers":[
+        {"id": "9", "name": "Indigo"},
+        {"id": "10", "name": "Ultramarine"},
+        {"id": "11", "name": "Egyptian Blue"},
+        {"id": "12", "name": "Prussian Blue"}]
+    },
+    {
+      "id": "10",
+      "difficulty":"hard",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
+      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
+      "correct_answer":"Ultramarine",
+      "answers":[
+        {"id": "9", "name": "Indigo"},
+        {"id": "10", "name": "Ultramarine"},
+        {"id": "11", "name": "Egyptian Blue"},
+        {"id": "12", "name": "Prussian Blue"}]
+    }
   ]
 
   

@@ -9,10 +9,10 @@ export default function Quiz(props) {
       <h2>question {props.getNumber()} of {props.questions.length}</h2>
     </div>
     <div className="col-sm-6">
-    <Link to="/" style={{color: 'black', textDecoration: 'none' }}><h1 className="display-2">Art Quiz</h1></Link>
+      <Link to="/" style={{color: 'black', textDecoration: 'none' }}><h1 className="small-title display-2">Art Quiz</h1></Link>
     </div>
     <div className="col-sm">
-      <h2>Score: {props.points} points</h2>
+      <h2>score: {props.points} points</h2>
     </div>
   </div>)
 }

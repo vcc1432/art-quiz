@@ -14,8 +14,13 @@ class QuizContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.props.loadQuestion(this.props.questions)
+    this.shuffleQuestions()
     this.shuffleAnswers()
+    this.props.loadQuestion(this.props.questions)
+  }
+
+  shuffleQuestions() {
+    this.props.questions.sort(function() { return 0.5 - Math.random() })
   }
 
   shuffleAnswers = () => {
@@ -51,10 +56,8 @@ class QuizContainer extends React.Component {
       answersArray.map(answer => {
         if (answer.innerText === this.props.question.correct_answer) {
           answer.style.backgroundColor = "#28A746"
-        } else {
-          answer.style.backgroundColor = "#DC3446"
-        }
-        
+          answer.style.borderColor = "#28A746"
+        }  
       })
     }
 
@@ -67,12 +70,8 @@ class QuizContainer extends React.Component {
       this.props.finishedQuiz()
     } else {
       this.props.nextQuestion(this.props.questions, currentIndex)
+    }
   }
-}
-
-
- 
-
 
   render() {
     console.log(this.state.disabled)
@@ -100,8 +99,7 @@ class QuizContainer extends React.Component {
         points={this.props.points}
         loadQuestion={this.props.loadQuestion}
       />}
-
-      
+    
     </div>
     )
   }
