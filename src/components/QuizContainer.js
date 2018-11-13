@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import Quiz from './Quiz'
 import Question from './Question'
 import Results from './Results'
-import {loadQuestion, addPoints, nextQuestion, finishedQuiz} from '../actions/questions'
+import {loadQuestion, addPoints, nextQuestion, finishedQuiz, reset} from '../actions/questions'
 
 
 class QuizContainer extends React.Component {
@@ -76,13 +76,14 @@ class QuizContainer extends React.Component {
   render() {
     console.log(this.state.disabled)
     return (
-    <div className="container quiz shadow p-3 bg-white">
+    <div className="container shadow p-3 bg-white">
 
       {!this.props.finished && <Quiz 
         questions={this.props.questions}
         question={this.props.question}
         points={this.props.points}
         getNumber={this.getNumber}
+        reset={this.props.reset}
       />}
 
      {this.props.question !== null && !this.props.finished && <Question
@@ -112,4 +113,4 @@ const mapStateToProps = state => ({
   finished: state.quiz.finishedQuiz
 })
 
-export default connect(mapStateToProps, {loadQuestion, addPoints, nextQuestion, finishedQuiz})(QuizContainer)
+export default connect(mapStateToProps, {loadQuestion, addPoints, nextQuestion, finishedQuiz, reset})(QuizContainer)

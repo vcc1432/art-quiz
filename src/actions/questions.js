@@ -2,6 +2,7 @@ export const LOAD_QUESTION = 'LOAD_QUESTION'
 export const ADD_POINTS = 'ADD_POINTS'
 export const NEXT_QUESTION = 'NEXT_QUESTION'
 export const FINISHED_QUIZ ='FINISHED_QUIZ'
+export const RESET = 'RESET'
 
 export const loadQuestion = (questionsArray) => ({
   type: LOAD_QUESTION,
@@ -21,4 +22,8 @@ export const nextQuestion = (questionsArray, index) => ({
 export const finishedQuiz = () => ({
   type: FINISHED_QUIZ,
   payload: true
+})
+
+export const reset = () => ({
+  type: RESET
 })

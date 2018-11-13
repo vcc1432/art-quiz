@@ -2,6 +2,7 @@
     {
       "id": "1",
       "difficulty":"easy",
+      "link": "",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/402px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
       "question":"Who painted the Mona Lisa?",
       "correct_answer":"Leonardo da Vinci",
@@ -15,6 +16,7 @@
     {
       "id": "2",
       "difficulty":"hard",
+      "link": "",
       "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Piet_Mondrian_2.jpg/590px-Piet_Mondrian_2.jpg",
       "question":"Painter Piet Mondrian (1872 - 1944) was a part of what movement?",
       "correct_answer":"Neoplasticism",
@@ -26,7 +28,8 @@
     },
     {
       "id": "3",
-      "difficulty":"hard",
+      "difficulty":"medium",
+      "link": "",
       "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
       "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is it called?",
       "correct_answer":"Ultramarine",
@@ -39,6 +42,7 @@
     {
       "id": "4",
       "difficulty":"easy",
+      "link": "",
       "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Michelangelo_-_Creation_of_Adam.jpg/640px-Michelangelo_-_Creation_of_Adam.jpg",
       "question":"Who painted the ceiling of the Sistine Chapel?",
       "correct_answer":"Michelangelo",
@@ -50,27 +54,29 @@
     },
     {
       "id": "5",
-      "difficulty":"hard",
-      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
-      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
-      "correct_answer":"Ultramarine",
+      "difficulty":"easy",
+      "link": "",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/VanGogh-starry_night.jpg/601px-VanGogh-starry_night.jpg",
+      "question":"Who painted The Starry Night?",
+      "correct_answer":"Vincent van Gogh",
       "answers":[
-        {"id": "9", "name": "Indigo"},
-        {"id": "10", "name": "Ultramarine"},
-        {"id": "11", "name": "Egyptian Blue"},
-        {"id": "12", "name": "Prussian Blue"}]
+        {"id": "17", "name": "Pablo Picasso"},
+        {"id": "18", "name": "Rembrandt van Rijn"},
+        {"id": "19", "name": "Vincent van Gogh"},
+        {"id": "20", "name": "Henry Matisse"}]
     },
     {
       "id": "6",
       "difficulty":"hard",
-      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
-      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
-      "correct_answer":"Ultramarine",
+      "link": "http://bruegel.analog.is/",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg/640px-Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg",
+      "question":"How many identifiable proverbs are depicted on this painting by Pieter Brueghel the Elder (c. 1525-1530 – 1569)?",
+      "correct_answer":"112",
       "answers":[
-        {"id": "9", "name": "Indigo"},
-        {"id": "10", "name": "Ultramarine"},
-        {"id": "11", "name": "Egyptian Blue"},
-        {"id": "12", "name": "Prussian Blue"}]
+        {"id": "21", "name": "87"},
+        {"id": "22", "name": "18"},
+        {"id": "23", "name": "56"},
+        {"id": "24", "name": "112"}]
     },
     {
       "id": "7",

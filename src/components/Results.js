@@ -10,7 +10,7 @@ export default function Quiz(props) {
 
     {props.points/props.questions.length <= 0.5 &&
       <div>
-        <p>Now that's not very good, is it? Frida would not approve!</p>
+        <p>Frida would not approve!</p>
         <img className="img-fluid" src="https://media.giphy.com/media/gVJKzDaWKSETu/giphy.gif" alt="Frida-Kahlo-does-not-approve"/> 
       </div>}
 
@@ -21,6 +21,8 @@ export default function Quiz(props) {
     </div>}
 
     <Link to="/quiz" style={{ textDecoration: 'none' }}><button type="button" class=" play-again btn btn-danger btn-lg mx-auto" onClick={loadQuestion(props.questions)}>Play again »</button></Link>
+    <h4>Click <Link to="/learn">here</Link> to learn more about some of the works of art featured in this quiz.</h4>
+
   </div>)
 }
 

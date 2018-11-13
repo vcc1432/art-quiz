@@ -1,5 +1,5 @@
 import questions from '../lib/db.json'
-import {LOAD_QUESTION, ADD_POINTS, NEXT_QUESTION, FINISHED_QUIZ} from '../actions/questions'
+import {LOAD_QUESTION, ADD_POINTS, NEXT_QUESTION, FINISHED_QUIZ, RESET} from '../actions/questions'
 
 const initialState = { 
   questions,
@@ -34,6 +34,9 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         finishedQuiz: action.payload
       }
+
+    case RESET:
+      return initialState
 
     default:
       return state
