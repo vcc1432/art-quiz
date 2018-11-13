@@ -35,16 +35,22 @@ html {
 
 }
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   .masthead {
-    padding-top: 0rem;
-    padding-bottom: 0rem;
+    height: 100%;
   }
   .quiz-title {
     font-size: 6rem;
   }
-  .container {
-    border-radius: 0px;
+  .img {
+    max-width: 75%;
+    height: auto;
+  }
+  .question-container {
+    padding: 5%;
+  }
+  .answers {
+    font-size: 5px;
   }
 }
 
@@ -58,13 +64,21 @@ html {
 }
 
 .answers {
-  border: none;
+  /* border: 1px solid black; */
   font: inherit;
   color: inherit;
   cursor: pointer;
-  background-color: grey;
+  background-color: white;
+  font-size: 1rem;
+  display: block;
+  width: 100%
 }
 
 .answers:hover {
   background-color: pink;
+}
+
+.img {
+  width: 75%;
+  display: block;
 }

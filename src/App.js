@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <header class="masthead d-flex">
+        <header className="masthead d-flex">
           <Route exact path="/" component={Home} />
           <Route exact path="/quiz" component={QuizContainer} />
         </header>

@@ -8,7 +8,9 @@ import {loadQuestion, addPoints, nextQuestion, finishedQuiz} from '../actions/qu
 
 class QuizContainer extends React.Component {
   state = {
-    disabled: false
+    disabled: false,
+    correctAnswer: false,
+    wrongAnswer: false
   }
 
   componentDidMount() {
@@ -16,52 +18,50 @@ class QuizContainer extends React.Component {
     this.shuffleAnswers()
   }
 
-  getNumber = () => {
-    const index = this.props.questions.indexOf(this.props.question)
-    return index + 1
-  }
-  
   shuffleAnswers = () => {
     this.props.questions.map(question => {
-    const correct = question.correct_answer
-    const answersArray = question.incorrect_answers
+    const answersArray = question.answers
 
-    if (answersArray.includes(correct)=== false) answersArray.push(correct)
     answersArray.sort(function() { return 0.5 - Math.random() })
     return answersArray
     })
   }
 
+  getNumber = () => {
+    const index = this.props.questions.indexOf(this.props.question)
+    return index + 1
+  }
+  
   handleClick = (event) => {
-    this.setState({ disabled: true})
-
     this.showBackgroundColor()
 
-    if (event.target.innerText === this.props.question.correct_answer) this.props.addPoints()
+    if (event.target.innerText === this.props.question.correct_answer) {
+      this.props.addPoints()
+      this.setState({ disabled: true, correctAnswer: true})
+    } else {
+      this.setState({ disabled: true, wrongAnswer: true})
+    }
     
-    setTimeout(this.waitForAnswer, 1500)
+    setTimeout(this.waitForAnswer, 2500)
     } 
   
     showBackgroundColor = () => {
       let answersArray = Array.from(document.getElementsByClassName("answers"))
-      console.log(answersArray)
 
       answersArray.map(answer => {
-        console.log(answer.innerText)
         if (answer.innerText === this.props.question.correct_answer) {
-          answer.style.backgroundColor = "#bfe59e"
+          answer.style.backgroundColor = "#28A746"
         } else {
-          answer.style.backgroundColor = "#efc2ae"
+          answer.style.backgroundColor = "#DC3446"
         }
+        
       })
     }
 
-  
   waitForAnswer = () => {
     const currentIndex = this.props.questions.indexOf(this.props.question)
-    console.log("?")
-    this.setState({disabled: false})
-    this.hideBackgroundColor()
+
+    this.setState({disabled: false, wrongAnswer: false, correctAnswer: false })
 
     if (currentIndex === this.props.questions.length-1) {
       this.props.finishedQuiz()
@@ -70,10 +70,7 @@ class QuizContainer extends React.Component {
   }
 }
 
-hideBackgroundColor = () => {
-  let answersArray = Array.from(document.getElementsByClassName("answers"))
-  answersArray.map(answer => answer.style.backgroundColor = "white")
-}
+
  
 
 
@@ -94,6 +91,8 @@ hideBackgroundColor = () => {
         shuffleAnswers={this.shuffleAnswers}
         handleClick={this.handleClick}
         disabled={this.state.disabled} 
+        correctAnswer={this.state.correctAnswer}
+        wrongAnswer={this.state.wrongAnswer}
       />}
 
       {this.props.finished && <Results 
