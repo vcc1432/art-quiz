@@ -1,6 +1,7 @@
 # Art History Pop Quiz
 
 This project was bootstrapped with create-react-app. It is a frontend application that retrieves data from a JSON file.
+The app is deployed on Github Pages: https://vcc1432.github.io/art-quiz/.
 
 ## Built with
 
