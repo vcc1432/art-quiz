@@ -1,6 +1,6 @@
 # Art History Pop Quiz
 
-This project was bootstrapped with create-react-app. It is a frontend that retrieves data from a JSON file.
+This project was bootstrapped with create-react-app. It is a frontend application that retrieves data from a JSON file.
 
 ## Built with
 
