@@ -20,17 +20,7 @@ export default function Quiz(props) {
       <img className="gif mx-auto img-fluid" src="https://media.giphy.com/media/3o6fJ8bcDsEs4SL8yY/giphy.gif" alt="medieval-instruments-played-by-monkeys"/> 
     </div>}
 
-    <Link to="/quiz" style={{ textDecoration: 'none' }}>
-      <button 
-        type="button" 
-        class=" play-again btn btn-danger btn-lg mx-auto" 
-        onClick={loadQuestion(questions)}>Play again »
-      </button>
-    </Link>
-    <h4>Click 
-      <Link to="/learn">here</Link> 
-      to learn more about some of the works of art featured in this quiz.
-    </h4>
+    <Link to="/quiz" style={{ textDecoration: 'none' }}><button type="button" class=" play-again btn btn-danger btn-lg mx-auto" onClick={() => loadQuestion(questions)}>Play again »</button></Link>
 
   </div>)
 }

@@ -2589,6 +2589,10 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
+dom-confetti@~0.0.11:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/dom-confetti/-/dom-confetti-0.0.12.tgz#22f3b4579e818ca59f539c1eebbcbf3c21e1d378"
+
 dom-converter@~0.2:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
@@ -6774,6 +6778,12 @@ react-dev-utils@^6.1.1:
     sockjs-client "1.1.5"
     strip-ansi "4.0.0"
     text-table "0.2.0"
+
+react-dom-confetti@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/react-dom-confetti/-/react-dom-confetti-0.0.10.tgz#6cde7af4af974ecf98ddf9da95c938144c68a4f0"
+  dependencies:
+    dom-confetti "~0.0.11"
 
 react-dom@^16.6.1:
   version "16.6.1"

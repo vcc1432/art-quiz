@@ -5,7 +5,6 @@ import Question from './Question'
 import Results from './Results'
 import {loadQuestion, addPoints, nextQuestion, finishedQuiz, reset} from '../actions/questions'
 
-
 class QuizContainer extends React.Component {
   state = {
     disabled: false,
@@ -13,6 +12,8 @@ class QuizContainer extends React.Component {
     wrongAnswer: false
   }
 
+  // When the component is mounted, the questions and answers are shuffled.
+  // The first question in the shuffled array is shown.
   componentDidMount() {
     const {loadQuestion, questions} = this.props
     this.shuffleQuestions()
@@ -21,24 +22,33 @@ class QuizContainer extends React.Component {
   }
 
   shuffleQuestions() {
-    this.props.questions.sort(function() { return 0.5 - Math.random() })
+    this.props.questions.sort(() => 0.5 - Math.random())
   }
 
+  // Finds the array of answers for every item in the questions array, and shufffles it. 
   shuffleAnswers = () => {
     this.props.questions.map(question => {
-    const answersArray = question.answers
+      const answersArray = question.answers
 
-    answersArray.sort(function() { return 0.5 - Math.random() })
-    return answersArray
+      answersArray.sort(() => 0.5 - Math.random())
+      return answersArray
     })
   }
 
+  // This function looks for the index of the current question in the questions array, returns the index + 1
   getNumber = () => {
     const { question, questions } = this.props
     const index = questions.indexOf(question)
     return index + 1
   }
   
+  // handleClick fires when an answer is clicked. 
+  // Displays the background of the right answer; 
+  // Sets the local state to correct/wrong, depending on which answer is clicked.
+  // If the right answer is clicked, 1 point is added to redux state by the action addPoints.
+  // Sets a timeout in which the answer is displayed.
+  // After the timeout, the function waitForAnswer fires.
+
   handleClick = (event) => {
     const { question, addPoints} = this.props
     this.showBackgroundColor()
@@ -50,7 +60,7 @@ class QuizContainer extends React.Component {
       this.setState({ disabled: true, wrongAnswer: true})
     }
     
-    setTimeout(this.waitForAnswer, 2500)
+    setTimeout(this.waitForAnswer, 3000)
     } 
   
     showBackgroundColor = () => {
@@ -64,6 +74,8 @@ class QuizContainer extends React.Component {
       })
     }
 
+  // Fires after timer ends. Resets the local state.
+  // Action nextQuestion (index of current question +1 ) or finishedquiz (displays resultspage) is fired. 
   waitForAnswer = () => {
     const {questions, question, finishedQuiz, nextQuestion} = this.props
     const currentIndex = questions.indexOf(question)
@@ -97,8 +109,9 @@ class QuizContainer extends React.Component {
         disabled={disabled} 
         correctAnswer={correctAnswer}
         wrongAnswer={wrongAnswer}
+        
       />}
-
+      
       {finished && <Results 
         questions={questions}
         points={points}

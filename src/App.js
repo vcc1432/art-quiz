@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import './App.css';
 import Home from './components/Home'
 import QuizContainer from './components/QuizContainer'
-import LearnMore from './components/LearnMore'
 
 
 class App extends Component {
@@ -11,9 +10,11 @@ class App extends Component {
     return (
       <Router>
         <header className="masthead d-flex">
-          <Route exact path="/" component={Home} />
-          <Route exact path="/quiz" component={QuizContainer} />
-          <Route exact path="/learn" component={LearnMore} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/quiz" component={QuizContainer} />
+            <Route component={() => (<Redirect to="/" />)} />
+          </Switch>
         </header>
       </Router>
     );
