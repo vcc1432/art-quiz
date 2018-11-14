@@ -14,9 +14,10 @@ class QuizContainer extends React.Component {
   }
 
   componentDidMount() {
+    const {loadQuestion, questions} = this.props
     this.shuffleQuestions()
     this.shuffleAnswers()
-    this.props.loadQuestion(this.props.questions)
+    loadQuestion(questions)
   }
 
   shuffleQuestions() {
@@ -33,15 +34,17 @@ class QuizContainer extends React.Component {
   }
 
   getNumber = () => {
-    const index = this.props.questions.indexOf(this.props.question)
+    const { question, questions } = this.props
+    const index = questions.indexOf(question)
     return index + 1
   }
   
   handleClick = (event) => {
+    const { question, addPoints} = this.props
     this.showBackgroundColor()
 
-    if (event.target.innerText === this.props.question.correct_answer) {
-      this.props.addPoints()
+    if (event.target.innerText === question.correct_answer) {
+      addPoints()
       this.setState({ disabled: true, correctAnswer: true})
     } else {
       this.setState({ disabled: true, wrongAnswer: true})
@@ -62,43 +65,44 @@ class QuizContainer extends React.Component {
     }
 
   waitForAnswer = () => {
-    const currentIndex = this.props.questions.indexOf(this.props.question)
+    const {questions, question, finishedQuiz, nextQuestion} = this.props
+    const currentIndex = questions.indexOf(question)
 
     this.setState({disabled: false, wrongAnswer: false, correctAnswer: false })
 
-    if (currentIndex === this.props.questions.length-1) {
-      this.props.finishedQuiz()
+    if (currentIndex === questions.length-1) {
+      finishedQuiz()
     } else {
-      this.props.nextQuestion(this.props.questions, currentIndex)
+      nextQuestion(questions, currentIndex)
     }
   }
 
   render() {
-    console.log(this.state.disabled)
+    const { questions, question, points, loadQuestion, reset, finished } = this.props
+    const { disabled, correctAnswer, wrongAnswer } = this.state
+
     return (
     <div className="container shadow p-3 bg-white">
 
-      {!this.props.finished && <Quiz 
-        questions={this.props.questions}
-        question={this.props.question}
-        points={this.props.points}
+      {!finished && <Quiz 
+        questions={questions}
+        points={points}
         getNumber={this.getNumber}
-        reset={this.props.reset}
+        reset={reset}
       />}
 
-     {this.props.question !== null && !this.props.finished && <Question
-        question={this.props.question}
-        shuffleAnswers={this.shuffleAnswers}
+     {question !== null && !finished && <Question
+        question={question}
         handleClick={this.handleClick}
-        disabled={this.state.disabled} 
-        correctAnswer={this.state.correctAnswer}
-        wrongAnswer={this.state.wrongAnswer}
+        disabled={disabled} 
+        correctAnswer={correctAnswer}
+        wrongAnswer={wrongAnswer}
       />}
 
-      {this.props.finished && <Results 
-        questions={this.props.questions}
-        points={this.props.points}
-        loadQuestion={this.props.loadQuestion}
+      {finished && <Results 
+        questions={questions}
+        points={points}
+        loadQuestion={loadQuestion}
       />}
     
     </div>

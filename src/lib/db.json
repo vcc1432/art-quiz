@@ -81,26 +81,26 @@
     {
       "id": "7",
       "difficulty":"hard",
-      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
-      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
-      "correct_answer":"Ultramarine",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lamgods_open.jpg/1024px-Lamgods_open.jpg",
+      "question":"In 1934, two panels of this altarpiece were stolen. One panel was recovered, but the other one was never found and in 1939 replaced by a copy. Which panel is this?",
+      "correct_answer":"Second row, first from the left (Just Judges)",
       "answers":[
-        {"id": "9", "name": "Indigo"},
-        {"id": "10", "name": "Ultramarine"},
-        {"id": "11", "name": "Egyptian Blue"},
-        {"id": "12", "name": "Prussian Blue"}]
+        {"id": "25", "name": "Second row, first from the left (Just Judges)"},
+        {"id": "26", "name": "Second row, second from the left (Knights of Christ)"},
+        {"id": "27", "name": "Second row, first from the right (Pilgrims) "},
+        {"id": "28", "name": "Second row, second from the right (Holy Hermits)"}]
     },
     {
       "id": "8",
       "difficulty":"hard",
-      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Natural_ultramarine_pigment.jpg",
-      "question":"This pigment was the most expensive blue untill the 19th century, and was made by grinding the semi-precious stone Lapis Lazuli. What is is called?",
-      "correct_answer":"Ultramarine",
+      "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/El_jard%C3%ADn_de_las_Delicias%2C_de_El_Bosco.jpg/1024px-El_jard%C3%ADn_de_las_Delicias%2C_de_El_Bosco.jpg",
+      "question":"What is the title of this enigmatic work by Hieronymus Bosch?",
+      "correct_answer":"The Garden of Earthly Delights",
       "answers":[
-        {"id": "9", "name": "Indigo"},
-        {"id": "10", "name": "Ultramarine"},
-        {"id": "11", "name": "Egyptian Blue"},
-        {"id": "12", "name": "Prussian Blue"}]
+        {"id": "29", "name": "The Garden of Earthly Delights"},
+        {"id": "30", "name": "The Creation of the World"},
+        {"id": "31", "name": "The Last Judgment"},
+        {"id": "32", "name": "Heaven and Hell"}]
     },
     {
       "id": "9",

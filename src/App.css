@@ -39,7 +39,7 @@ html {
     font-size: 6rem;
   }
   .img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
   }
   .question-container h3 {
@@ -67,7 +67,7 @@ html {
   display: block;
   padding: 5%;
   margin-bottom: 5%;
-  width: 80%;
+  width: 90%;
 }
 
 .question-container {
@@ -89,7 +89,7 @@ html {
 }
 
 .img {
-  width: 75%;
+  width: 90%;
   display: block;
 }
 
