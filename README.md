@@ -13,6 +13,6 @@ On the homepage, the user can click 'play' to start the quiz.
 
 The quiz displays one question at the time, the user has to pick the right answer from a list. There is no time pressure.
 
-If the user selects the correct answer, the user scores 1 point.
+If the user selects the correct answer, the user scores 1 point, and after a timeout, the next question is displayed.
 
 The quiz ends when the last question is answered.
